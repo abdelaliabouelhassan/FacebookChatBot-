@@ -15,5 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/bot', 'BotManController@bot')->middleware('verifyBot');
+Route::post('/bot', 'BotManController@bot');
+
+
+
 Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 Route::get('/botman/tinker', 'BotManController@tinker');
