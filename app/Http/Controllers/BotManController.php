@@ -34,9 +34,11 @@ class BotManController extends Controller
     {
         $bot->startConversation(new ExampleConversation());
     }
-
-
-    public function(){
+    public function bot()
+    {
         return "helo world";
+
     }
+
+
 }
